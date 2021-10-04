@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+  </head>
+  <body>
+		<div class="container">
+			<form>
+				<h1>Form Pendaftaran</h1>
+				<div id="form">
+					<label for="nama">Nama:</label>
+					<input type="text" id="nama" name="nama" placeholder="Enter your fullname" />
+					<small></small>
+				</div>
+				<div>
+					<label for="email">Email:</label>
+					<input type="text" id="email" name="email" placeholder="Enter your email address" />
+					<small></small>
+				</div>
+				<div>
+					<label for="telepon">No.Telp:</label>
+					<input type="text" id="telepon" name="telepon" placeholder="Enter your phone number" />
+					<small></small>
+				</div>
+				<div>
+					<button onclick="simpan()" type="button">Submit</button>
+				</div>
+			</form>
+		</div>
+    <script>
+  		function simpan(){
+
+				var inputNama= document.getElementById("nama").value;
+				localStorage.setItem("nama", inputNama);
+
+				var inputEmail= document.getElementById("email").value;
+				localStorage.setItem("email", inputEmail);
+
+				var inputTelepon= document.getElementById("telepon").value;
+				localStorage.setItem("telepon", inputTelepon);
+    	}
+	</script>
+  </body>
+</html>
